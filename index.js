@@ -25,7 +25,7 @@ async function show_tabla(idd){
         ` 
         count+=1
       });
-      for (count;count<=10;count++){
+      for (count;count<=2;count++){
         res.innerHTML +=`
         <tr class="table-active">
         <td class="col">--</td>
@@ -39,19 +39,19 @@ async function show_parqueos(){
   const prueba = ref(db,'/parqueos_disponibles/');
   await onValue(prueba, (snapshot) => {
     const data = snapshot.val();
-    texto.innerHTML =`Parqueos disponibles: ${10-data}`
+    texto.innerHTML =`Parqueos disponibles: ${2-data}`
     verif_parqueo(data)
   });
 }
 
 function verif_parqueo(data){
   const disp = document.getElementById("estado-parqueo")
-  if (data == 10){
-    disp.innerHTML = "Parqueo Cerrado"
-    disp.classList = "no_disponible"
-  }
-  else{
+  if (data > 0){
     disp.innerHTML = "Parqueo Abierto"
     disp.classList = "disponible"
+  }
+  else{
+    disp.innerHTML = "Parqueo Cerrado"
+    disp.classList = "no_disponible"
   }
 }
