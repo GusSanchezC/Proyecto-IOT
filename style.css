@@ -1,0 +1,41 @@
+.tabla{
+    display: inline;
+    height: 300px;
+    text-align: center;
+    border-color: black;
+    overflow-y: auto;
+}
+#divtabla{
+    padding-left: 35%;
+}
+.table-fixed tr{
+    display: block;
+}
+.table-fixed tbody td,
+.table-fixed thead>tr>th {
+    font-size: 14px;
+    padding-right: 5%;
+    width: 2in;
+}
+.table-fixed thead>tr>th{
+    padding-right:2%;
+    padding-left: 2%;
+    width: 2in;
+}
+.disponible{
+    color: green;
+}
+.no_disponible{
+    color: red;
+}
+.texto{
+    padding-top: 25px;
+    padding-left: 30%;
+    display: inline-block;
+}
+.boton{
+    padding-left: 5%;
+    width: 200px;
+    bottom: 40px;
+    height: 50px;
+}
